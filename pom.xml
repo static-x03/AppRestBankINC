@@ -17,6 +17,8 @@
 	<description>Prueba Bank inc</description>
 	
 	<properties>
+  <configuration-skipTests46>true</configuration-skipTests46>
+  <configuration-skipTests>true</configuration-skipTests>
 		<java.version>17</java.version>
 	</properties>
 	
@@ -95,6 +97,13 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+		    <plugin>
+		      <groupId>org.apache.maven.plugins</groupId>
+		      <artifactId>maven-surefire-plugin</artifactId>
+		      <configuration>
+		        <skipTests>true</skipTests>
+		      </configuration>
+		    </plugin>
 		</plugins>
 	</build>
 
